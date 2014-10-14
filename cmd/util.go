@@ -7,10 +7,10 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/nybuxtsui/etcd-ca/third_party/code.google.com/p/go.crypto/ssh/terminal"
-	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/ca/third_party/code.google.com/p/go.crypto/ssh/terminal"
+	"github.com/nybuxtsui/ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/nybuxtsui/etcd-ca/depot"
+	"github.com/nybuxtsui/ca/depot"
 )
 
 var (

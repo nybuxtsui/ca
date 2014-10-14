@@ -10,7 +10,7 @@ import (
 
 const (
 	// hostname used by CA certificate
-	authHostname = "CA"
+	authHostname = "PRVI-CA"
 	// SerialNumber to start when signing certificate request
 	authStartSerialNumber = 2
 )
@@ -18,7 +18,7 @@ const (
 var (
 	authPkixName = pkix.Name{
 		Country:            []string{"CN"},
-		Organization:       []string{"dzh"},
+		Organization:       []string{authHostname},
 		OrganizationalUnit: []string{authHostname},
 		Locality:           nil,
 		Province:           nil,
@@ -34,7 +34,7 @@ var (
 		// NotBefore is set to be 10min earlier to fix gap on time difference in cluster
 		NotBefore: time.Now().Add(-600).UTC(),
 		// 10-year lease
-		NotAfter: time.Now().AddDate(10, 0, 0).UTC(),
+		NotAfter: time.Now().AddDate(100, 0, 0).UTC(),
 		// Used for certificate signing only
 		KeyUsage: x509.KeyUsageCertSign,
 

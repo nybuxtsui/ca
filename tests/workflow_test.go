@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-// TestWorkflow runs etcd-ca in the normal workflow
+// TestWorkflow runs ca in the normal workflow
 // and traverses all commands
 func TestWorkflow(t *testing.T) {
 	os.RemoveAll(depotDir)

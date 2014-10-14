@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 proj_dir="github.com/nybuxtsui/"
-proj_name="etcd-ca"
+proj_name="ca"
 proj_path=$proj_dir$proj_name
 
 echo "Building $proj_name"

@@ -8,7 +8,7 @@ import (
 	"errors"
 	"net"
 
-	"github.com/nybuxtsui/etcd-ca/third_party/github.com/jstemmer/pkcs10"
+	"github.com/nybuxtsui/ca/third_party/github.com/jstemmer/pkcs10"
 )
 
 const (
@@ -17,8 +17,8 @@ const (
 
 var (
 	csrPkixName = pkix.Name{
-		Country:            []string{"USA"},
-		Organization:       []string{"etcd-ca"},
+		Country:            []string{"CN"},
+		Organization:       nil,
 		OrganizationalUnit: nil,
 		Locality:           nil,
 		Province:           nil,
@@ -35,6 +35,7 @@ func CreateCertificateSigningRequest(key *Key, name string, ip string) (*Certifi
 		return nil, errors.New("failed to parse ip")
 	}
 
+	csrPkixName.Organization = []string{name}
 	csrPkixName.OrganizationalUnit = []string{name}
 	csrPkixName.CommonName = ip
 	csrTemplate := &pkcs10.CertificateSigningRequest{Subject: csrPkixName}

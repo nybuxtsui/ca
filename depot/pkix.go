@@ -3,7 +3,7 @@ package depot
 import (
 	"strings"
 
-	"github.com/nybuxtsui/etcd-ca/pkix"
+	"github.com/nybuxtsui/ca/pkix"
 )
 
 const (

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/nybuxtsui/etcd-ca/depot"
+	"github.com/nybuxtsui/ca/depot"
 )
 
 func NewChainCommand() cli.Command {

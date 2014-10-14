@@ -8,7 +8,7 @@ import (
 
 const (
 	data = "It is a trap only!"
-	dir  = ".etcd-ca-test"
+	dir  = "certs-test"
 )
 
 var (

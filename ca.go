@@ -3,17 +3,17 @@ package main
 import (
 	"os"
 
-	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/nybuxtsui/etcd-ca/cmd"
-	"github.com/nybuxtsui/etcd-ca/depot"
+	"github.com/nybuxtsui/ca/cmd"
+	"github.com/nybuxtsui/ca/depot"
 )
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "etcd-ca"
+	app.Name = "ca"
 	app.Version = "0.1.0"
-	app.Usage = "A very simple CA manager written in Go. Primarly used for coreos/etcd SSL/TLS testing."
+	app.Usage = "A very simple CA manager written in Go."
 	app.Flags = []cli.Flag{
 		cli.StringFlag{"depot-path", depot.DefaultFileDepotDir, "Location to store certificates, keys and other files."},
 	}
