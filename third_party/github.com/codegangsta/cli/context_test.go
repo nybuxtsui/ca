@@ -2,7 +2,7 @@ package cli_test
 
 import (
 	"flag"
-	"github.com/coreos/fleet/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/fleet/third_party/github.com/codegangsta/cli"
 	"testing"
 )
 

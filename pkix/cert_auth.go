@@ -17,8 +17,8 @@ const (
 
 var (
 	authPkixName = pkix.Name{
-		Country:            []string{"USA"},
-		Organization:       []string{"etcd-ca"},
+		Country:            []string{"CN"},
+		Organization:       []string{"dzh"},
 		OrganizationalUnit: []string{authHostname},
 		Locality:           nil,
 		Province:           nil,

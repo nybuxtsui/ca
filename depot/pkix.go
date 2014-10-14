@@ -3,7 +3,7 @@ package depot
 import (
 	"strings"
 
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/nybuxtsui/etcd-ca/pkix"
 )
 
 const (

@@ -1,13 +1,13 @@
 package cli_test
 
 import (
-	"github.com/coreos/fleet/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/fleet/third_party/github.com/codegangsta/cli"
 	"testing"
 )
 
 var boolFlagTests = []struct {
-	name		string
-	expected	string
+	name     string
+	expected string
 }{
 	{"help", "--help\t"},
 	{"h", "-h\t"},
@@ -26,8 +26,8 @@ func TestBoolFlagHelpOutput(t *testing.T) {
 }
 
 var stringFlagTests = []struct {
-	name		string
-	expected	string
+	name     string
+	expected string
 }{
 	{"help", "--help ''\t"},
 	{"h", "-h ''\t"},
@@ -46,8 +46,8 @@ func TestStringFlagHelpOutput(t *testing.T) {
 }
 
 var intFlagTests = []struct {
-	name		string
-	expected	string
+	name     string
+	expected string
 }{
 	{"help", "--help '0'\t"},
 	{"h", "-h '0'\t"},
@@ -66,8 +66,8 @@ func TestIntFlagHelpOutput(t *testing.T) {
 }
 
 var float64FlagTests = []struct {
-	name		string
-	expected	string
+	name     string
+	expected string
 }{
 	{"help", "--help '0'\t"},
 	{"h", "-h '0'\t"},

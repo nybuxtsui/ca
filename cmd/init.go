@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/nybuxtsui/etcd-ca/depot"
+	"github.com/nybuxtsui/etcd-ca/pkix"
 )
 
 func NewInitCommand() cli.Command {
@@ -17,7 +17,7 @@ func NewInitCommand() cli.Command {
 		Description: "Create Certificate Authority, including certificate, key and extra information file.",
 		Flags: []cli.Flag{
 			cli.StringFlag{"passphrase", "", "Passphrase to encrypt private-key PEM block"},
-			cli.IntFlag{"key-bits", 4096, "Bit size of RSA keypair to generate"},
+			cli.IntFlag{"key-bits", 2048, "Bit size of RSA keypair to generate"},
 		},
 		Action: initAction,
 	}
@@ -28,7 +28,6 @@ func initAction(c *cli.Context) {
 		fmt.Fprintln(os.Stderr, "CA has existed!")
 		os.Exit(1)
 	}
-
 	var passphrase []byte
 	var err error
 	if c.IsSet("passphrase") {

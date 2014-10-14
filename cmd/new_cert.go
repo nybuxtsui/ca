@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/nybuxtsui/etcd-ca/depot"
+	"github.com/nybuxtsui/etcd-ca/pkix"
 )
 
 func NewNewCertCommand() cli.Command {
@@ -18,7 +18,7 @@ func NewNewCertCommand() cli.Command {
 		Flags: []cli.Flag{
 			cli.StringFlag{"passphrase", "", "Passphrase to encrypt private-key PEM block"},
 			cli.StringFlag{"ip", "127.0.0.1", "IP address of the host"},
-			cli.IntFlag{"key-bits", 4096, "Bit size of RSA keypair to generate"},
+			cli.IntFlag{"key-bits", 2048, "Bit size of RSA keypair to generate"},
 		},
 		Action: newCertAction,
 	}

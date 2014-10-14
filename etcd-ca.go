@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
-	"github.com/coreos/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/coreos/etcd-ca/cmd"
-	"github.com/coreos/etcd-ca/depot"
+	"github.com/nybuxtsui/etcd-ca/cmd"
+	"github.com/nybuxtsui/etcd-ca/depot"
 )
 
 func main() {

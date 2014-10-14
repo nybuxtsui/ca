@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/etcd-ca/third_party/github.com/codegangsta/cli"
 
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/nybuxtsui/etcd-ca/depot"
+	"github.com/nybuxtsui/etcd-ca/pkix"
 )
 
 const (

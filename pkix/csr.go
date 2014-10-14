@@ -8,7 +8,7 @@ import (
 	"errors"
 	"net"
 
-	"github.com/coreos/etcd-ca/third_party/github.com/jstemmer/pkcs10"
+	"github.com/nybuxtsui/etcd-ca/third_party/github.com/jstemmer/pkcs10"
 )
 
 const (

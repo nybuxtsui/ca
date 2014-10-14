@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	DefaultFileDepotDir = ".etcd-ca"
+	DefaultFileDepotDir = "certs"
 )
 
 // Tag includes name and permission requirement

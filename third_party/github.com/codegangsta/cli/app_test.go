@@ -2,7 +2,7 @@ package cli_test
 
 import (
 	"fmt"
-	"github.com/coreos/fleet/third_party/github.com/codegangsta/cli"
+	"github.com/nybuxtsui/fleet/third_party/github.com/codegangsta/cli"
 	"os"
 	"testing"
 )
@@ -40,8 +40,8 @@ func TestApp_Run(t *testing.T) {
 }
 
 var commandAppTests = []struct {
-	name		string
-	expected	bool
+	name     string
+	expected bool
 }{
 	{"foobar", true},
 	{"batbaz", true},
@@ -70,7 +70,7 @@ func TestApp_CommandWithArgBeforeFlags(t *testing.T) {
 
 	app := cli.NewApp()
 	command := cli.Command{
-		Name:	"cmd",
+		Name: "cmd",
 		Flags: []cli.Flag{
 			cli.StringFlag{Name: "option", Value: "", Usage: "some option"},
 		},
@@ -109,7 +109,7 @@ func TestApp_ParseSliceFlags(t *testing.T) {
 
 	app := cli.NewApp()
 	command := cli.Command{
-		Name:	"cmd",
+		Name: "cmd",
 		Flags: []cli.Flag{
 			cli.IntSliceFlag{Name: "p", Value: &cli.IntSlice{}, Usage: "set one or more ip addr"},
 			cli.StringSliceFlag{Name: "ip", Value: &cli.StringSlice{}, Usage: "set one or more ports to open"},
@@ -179,7 +179,7 @@ func TestApp_BeforeFunc(t *testing.T) {
 
 	app.Commands = []cli.Command{
 		cli.Command{
-			Name:	"sub",
+			Name: "sub",
 			Action: func(c *cli.Context) {
 				subcommandRun = true
 			},
